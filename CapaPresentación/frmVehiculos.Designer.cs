@@ -96,7 +96,7 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(35, 80);
+            dataGridView1.Location = new Point(26, 80);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(591, 224);
             dataGridView1.TabIndex = 6;
@@ -108,14 +108,13 @@
             btnAgregar.FlatAppearance.BorderSize = 0;
             btnAgregar.FlatAppearance.MouseOverBackColor = Color.LightSteelBlue;
             btnAgregar.FlatStyle = FlatStyle.Flat;
-            btnAgregar.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAgregar.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = Color.White;
-            btnAgregar.Location = new Point(115, 310);
+            btnAgregar.Location = new Point(79, 310);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(111, 42);
             btnAgregar.TabIndex = 7;
             btnAgregar.Text = "Agregar";
-            btnAgregar.TextAlign = ContentAlignment.TopCenter;
             btnAgregar.UseVisualStyleBackColor = false;
             btnAgregar.Click += button1_Click;
             // 
@@ -128,7 +127,7 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(302, 310);
+            btnEditar.Location = new Point(266, 310);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(111, 42);
             btnEditar.TabIndex = 8;
@@ -145,7 +144,7 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe Fluent Icons", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(490, 310);
+            btnEliminar.Location = new Point(454, 310);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(111, 42);
             btnEliminar.TabIndex = 9;
@@ -169,6 +168,7 @@
             btnBuscar.Text = "Buscar";
             btnBuscar.TextAlign = ContentAlignment.TopCenter;
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // textBox7
             // 

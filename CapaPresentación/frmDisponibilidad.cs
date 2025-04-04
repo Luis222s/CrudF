@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentación
 {
@@ -16,6 +17,12 @@ namespace CapaPresentación
         public frmDisponibilidad()
         {
             InitializeComponent();
+
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+
+
+            btnBuscar1.Text = "Habilitar";
 
             //Redondear botones
             int radius = 20;
@@ -59,7 +66,7 @@ namespace CapaPresentación
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,5 +74,25 @@ namespace CapaPresentación
 
         }
 
+        private void btnBuscar1_Click(object sender, EventArgs e)
+        {
+            bool estanHabilitados = comboBox1.Enabled && comboBox2.Enabled;
+
+            // Alternamos el estado de habilitación
+            comboBox1.Enabled = !estanHabilitados;
+            comboBox2.Enabled = !estanHabilitados;
+
+
+
+            // Opcional: cambiar el texto del botón para indicar la acción siguiente
+            if (estanHabilitados)
+            {
+                btnBuscar1.Text = "Habilitar";
+            }
+            else
+            {
+                btnBuscar1.Text = "Deshabilitar";
+            }
+        }
     }
 }

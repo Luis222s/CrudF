@@ -18,6 +18,15 @@ namespace CapaPresentación
         {
             InitializeComponent();
 
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            textBox6.Enabled = false;
+
+            btnBuscar.Text = "Habilitar";
+
             // Esquinas redondeadas para los botones
             int radius = 20;
 
@@ -60,7 +69,29 @@ namespace CapaPresentación
 
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // Si los TextBox están habilitados, los deshabilitamos, si están deshabilitados, los habilitamos.
+            bool estanHabilitados = textBox1.Enabled && textBox2.Enabled && textBox3.Enabled && textBox4.Enabled && textBox5.Enabled && textBox6.Enabled;
 
+            // Alternamos el estado de habilitación
+            textBox1.Enabled = !estanHabilitados;
+            textBox2.Enabled = !estanHabilitados;
+            textBox3.Enabled = !estanHabilitados;
+            textBox4.Enabled = !estanHabilitados;
+            textBox5.Enabled = !estanHabilitados;
+            textBox6.Enabled = !estanHabilitados;
+
+            // Opcional: cambiar el texto del botón para indicar la acción siguiente
+            if (estanHabilitados)
+            {
+                btnBuscar.Text = "Habilitar";
+            }
+            else
+            {
+                btnBuscar.Text = "Deshabilitar";
+            }
+        }
     }
 
 }

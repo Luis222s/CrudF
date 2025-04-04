@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentación
 {
@@ -16,6 +17,14 @@ namespace CapaPresentación
         public frmProveedores()
         {
             InitializeComponent();
+
+            textbox1.Enabled = false;
+            textbox2.Enabled = false;
+            textbox3.Enabled = false;
+            textbox4.Enabled = false;
+
+
+            btnBuscar2.Text = "Habilitar";
 
             // Redondear botones
             int radius = 20;
@@ -50,6 +59,29 @@ namespace CapaPresentación
             pathBuscar2.AddArc(0, btnBuscar2.Height - radius, radius, radius, 90, 90);
             pathBuscar2.CloseFigure();
             btnBuscar2.Region = new Region(pathBuscar2);
+        }
+
+        private void btnBuscar2_Click(object sender, EventArgs e)
+        {
+            // Si los TextBox están habilitados, los deshabilitamos, si están deshabilitados, los habilitamos.
+            bool estanHabilitados = textbox1.Enabled && textbox2.Enabled && textbox3.Enabled && textbox4.Enabled;
+
+            // Alternamos el estado de habilitación
+            textbox1.Enabled = !estanHabilitados;
+            textbox2.Enabled = !estanHabilitados;
+            textbox3.Enabled = !estanHabilitados;
+            textbox4.Enabled = !estanHabilitados;
+
+
+            // Opcional: cambiar el texto del botón para indicar la acción siguiente
+            if (estanHabilitados)
+            {
+                btnBuscar2.Text = "Habilitar";
+            }
+            else
+            {
+                btnBuscar2.Text = "Deshabilitar";
+            }
         }
     }
 }

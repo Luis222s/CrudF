@@ -34,10 +34,10 @@
             btnEliminar2 = new Button();
             btnEditar2 = new Button();
             btnAgregar2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            textbox1 = new TextBox();
+            textbox2 = new TextBox();
+            textbox3 = new TextBox();
+            textbox4 = new TextBox();
             textBox5 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -67,6 +67,7 @@
             btnBuscar2.Text = "Buscar";
             btnBuscar2.TextAlign = ContentAlignment.TopCenter;
             btnBuscar2.UseVisualStyleBackColor = false;
+            btnBuscar2.Click += btnBuscar2_Click;
             // 
             // btnEliminar2
             // 
@@ -109,43 +110,42 @@
             btnAgregar2.FlatAppearance.BorderSize = 0;
             btnAgregar2.FlatAppearance.MouseOverBackColor = Color.LightSteelBlue;
             btnAgregar2.FlatStyle = FlatStyle.Flat;
-            btnAgregar2.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAgregar2.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregar2.ForeColor = Color.White;
             btnAgregar2.Location = new Point(141, 353);
             btnAgregar2.Name = "btnAgregar2";
             btnAgregar2.Size = new Size(111, 43);
             btnAgregar2.TabIndex = 11;
             btnAgregar2.Text = "Agregar";
-            btnAgregar2.TextAlign = ContentAlignment.TopCenter;
             btnAgregar2.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // textbox1
             // 
-            textBox1.Location = new Point(141, 409);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(139, 23);
-            textBox1.TabIndex = 15;
+            textbox1.Location = new Point(141, 409);
+            textbox1.Name = "textbox1";
+            textbox1.Size = new Size(139, 23);
+            textbox1.TabIndex = 15;
             // 
-            // textBox2
+            // textbox2
             // 
-            textBox2.Location = new Point(141, 471);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(139, 23);
-            textBox2.TabIndex = 16;
+            textbox2.Location = new Point(141, 471);
+            textbox2.Name = "textbox2";
+            textbox2.Size = new Size(139, 23);
+            textbox2.TabIndex = 16;
             // 
-            // textBox3
+            // textbox3
             // 
-            textBox3.Location = new Point(494, 471);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(139, 23);
-            textBox3.TabIndex = 18;
+            textbox3.Location = new Point(494, 471);
+            textbox3.Name = "textbox3";
+            textbox3.Size = new Size(139, 23);
+            textbox3.TabIndex = 18;
             // 
-            // textBox4
+            // textbox4
             // 
-            textBox4.Location = new Point(494, 409);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(139, 23);
-            textBox4.TabIndex = 17;
+            textbox4.Location = new Point(494, 409);
+            textbox4.Name = "textbox4";
+            textbox4.Size = new Size(139, 23);
+            textbox4.TabIndex = 17;
             // 
             // textBox5
             // 
@@ -161,10 +161,10 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(656, 565);
             Controls.Add(textBox5);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textbox3);
+            Controls.Add(textbox4);
+            Controls.Add(textbox2);
+            Controls.Add(textbox1);
             Controls.Add(btnBuscar2);
             Controls.Add(btnEliminar2);
             Controls.Add(btnEditar2);
@@ -185,10 +185,10 @@
         private Button btnEliminar2;
         private Button btnEditar2;
         private Button btnAgregar2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textbox1;
+        private TextBox textbox2;
+        private TextBox textbox3;
+        private TextBox textbox4;
         private TextBox textBox5;
     }
 }
