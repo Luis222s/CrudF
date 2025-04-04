@@ -17,7 +17,7 @@ namespace CapaPresentación
         public frmDisponibilidad()
         {
             InitializeComponent();
-
+            //probando un cambio extra
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
 
