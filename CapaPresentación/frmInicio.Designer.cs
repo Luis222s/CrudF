@@ -44,6 +44,8 @@
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             panel3 = new Panel();
+            pictureBox8 = new PictureBox();
+            btn_acerca = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
@@ -52,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // btnInicio
@@ -65,7 +68,7 @@
             btnInicio.Font = new Font("Segoe Fluent Icons", 27F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnInicio.ForeColor = Color.White;
             btnInicio.ImageAlign = ContentAlignment.TopLeft;
-            btnInicio.Location = new Point(53, 28);
+            btnInicio.Location = new Point(53, 3);
             btnInicio.Name = "btnInicio";
             btnInicio.Size = new Size(174, 50);
             btnInicio.TabIndex = 0;
@@ -84,7 +87,7 @@
             btnVehiculos.FlatStyle = FlatStyle.Flat;
             btnVehiculos.Font = new Font("Segoe Fluent Icons", 27F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVehiculos.ForeColor = Color.White;
-            btnVehiculos.Location = new Point(53, 105);
+            btnVehiculos.Location = new Point(53, 80);
             btnVehiculos.Name = "btnVehiculos";
             btnVehiculos.Size = new Size(174, 50);
             btnVehiculos.TabIndex = 1;
@@ -103,7 +106,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe Fluent Icons", 27F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(56, 182);
+            button1.Location = new Point(56, 157);
             button1.Name = "button1";
             button1.Size = new Size(171, 50);
             button1.TabIndex = 2;
@@ -122,7 +125,7 @@
             btnProveedor.FlatStyle = FlatStyle.Flat;
             btnProveedor.Font = new Font("Segoe Fluent Icons", 27F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProveedor.ForeColor = Color.White;
-            btnProveedor.Location = new Point(56, 261);
+            btnProveedor.Location = new Point(56, 236);
             btnProveedor.Name = "btnProveedor";
             btnProveedor.Size = new Size(168, 50);
             btnProveedor.TabIndex = 3;
@@ -141,7 +144,7 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Segoe Fluent Icons", 30.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.White;
-            btnSalir.Location = new Point(48, 342);
+            btnSalir.Location = new Point(48, 317);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(179, 50);
             btnSalir.TabIndex = 4;
@@ -188,6 +191,8 @@
             // panel2
             // 
             panel2.BackColor = Color.SteelBlue;
+            panel2.Controls.Add(btn_acerca);
+            panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(pictureBox7);
             panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(pictureBox5);
@@ -206,7 +211,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 342);
+            pictureBox7.Location = new Point(3, 317);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(52, 50);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -216,7 +221,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(3, 261);
+            pictureBox6.Location = new Point(3, 236);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(52, 50);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -226,7 +231,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(3, 182);
+            pictureBox5.Location = new Point(3, 157);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(52, 50);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -237,7 +242,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(3, 105);
+            pictureBox4.Location = new Point(3, 80);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(52, 50);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -247,7 +252,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(3, 28);
+            pictureBox3.Location = new Point(3, 3);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(52, 50);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -261,6 +266,35 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(651, 538);
             panel3.TabIndex = 9;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(3, 399);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(52, 50);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 0;
+            pictureBox8.TabStop = false;
+            // 
+            // btn_acerca
+            // 
+            btn_acerca.BackColor = Color.Transparent;
+            btn_acerca.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_acerca.Cursor = Cursors.Hand;
+            btn_acerca.FlatAppearance.BorderSize = 0;
+            btn_acerca.FlatAppearance.MouseOverBackColor = Color.FromArgb(78, 139, 183);
+            btn_acerca.FlatStyle = FlatStyle.Flat;
+            btn_acerca.Font = new Font("Segoe Fluent Icons", 27F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_acerca.ForeColor = Color.White;
+            btn_acerca.Location = new Point(53, 399);
+            btn_acerca.Name = "btn_acerca";
+            btn_acerca.Size = new Size(171, 50);
+            btn_acerca.TabIndex = 9;
+            btn_acerca.Text = "Conócenos";
+            btn_acerca.TextAlign = ContentAlignment.TopLeft;
+            btn_acerca.UseVisualStyleBackColor = false;
+            btn_acerca.Click += btn_acerca_Click;
             // 
             // frmInicio
             // 
@@ -287,6 +321,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
@@ -307,5 +342,7 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
+        private PictureBox pictureBox8;
+        private Button btn_acerca;
     }
 }

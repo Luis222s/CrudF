@@ -93,5 +93,10 @@ namespace CapaPresentación
         {
 
         }
+
+        private void btn_acerca_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frmAcercaDe());
+        }
     }
 }

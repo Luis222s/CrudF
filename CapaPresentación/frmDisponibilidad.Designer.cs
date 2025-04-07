@@ -58,7 +58,7 @@
             btnAgregar1.FlatStyle = FlatStyle.Flat;
             btnAgregar1.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgregar1.ForeColor = Color.White;
-            btnAgregar1.Location = new Point(149, 332);
+            btnAgregar1.Location = new Point(108, 333);
             btnAgregar1.Name = "btnAgregar1";
             btnAgregar1.Size = new Size(112, 46);
             btnAgregar1.TabIndex = 4;
@@ -75,7 +75,7 @@
             btnEditar1.FlatStyle = FlatStyle.Flat;
             btnEditar1.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEditar1.ForeColor = Color.White;
-            btnEditar1.Location = new Point(316, 332);
+            btnEditar1.Location = new Point(275, 333);
             btnEditar1.Name = "btnEditar1";
             btnEditar1.Size = new Size(112, 46);
             btnEditar1.TabIndex = 5;
@@ -93,7 +93,7 @@
             btnEliminar1.FlatStyle = FlatStyle.Flat;
             btnEliminar1.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEliminar1.ForeColor = Color.White;
-            btnEliminar1.Location = new Point(484, 332);
+            btnEliminar1.Location = new Point(443, 333);
             btnEliminar1.Name = "btnEliminar1";
             btnEliminar1.Size = new Size(112, 46);
             btnEliminar1.TabIndex = 6;
