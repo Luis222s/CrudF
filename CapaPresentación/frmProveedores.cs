@@ -23,6 +23,7 @@ namespace CapaPresentación
         {
             InitializeComponent();
 
+            //Los botones empiezan desabilitados
             textbox1.Enabled = false;
             textbox2.Enabled = false;
             textbox3.Enabled = false;

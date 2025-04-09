@@ -29,7 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
+            lblcantidad = new Label();
             SuspendLayout();
+            // 
+            // lblcantidad
+            // 
+            lblcantidad.AutoSize = true;
+            lblcantidad.BackColor = Color.Transparent;
+            lblcantidad.Font = new Font("Segoe MDL2 Assets", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblcantidad.ForeColor = Color.White;
+            lblcantidad.Location = new Point(312, 310);
+            lblcantidad.Name = "lblcantidad";
+            lblcantidad.Size = new Size(32, 37);
+            lblcantidad.TabIndex = 0;
+            lblcantidad.Text = "2";
+            lblcantidad.Click += lblcantidad_Click;
             // 
             // frmHome
             // 
@@ -37,12 +51,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(656, 565);
+            Controls.Add(lblcantidad);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmHome";
             Text = "frmHome";
+            Load += frmHome_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblcantidad;
     }
 }
