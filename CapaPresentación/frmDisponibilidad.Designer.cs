@@ -37,6 +37,7 @@
             textBox4 = new TextBox();
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -111,9 +112,9 @@
             btnBuscar1.FlatStyle = FlatStyle.Flat;
             btnBuscar1.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar1.ForeColor = Color.White;
-            btnBuscar1.Location = new Point(516, 51);
+            btnBuscar1.Location = new Point(485, 51);
             btnBuscar1.Name = "btnBuscar1";
-            btnBuscar1.Size = new Size(80, 36);
+            btnBuscar1.Size = new Size(130, 36);
             btnBuscar1.TabIndex = 11;
             btnBuscar1.Text = "Buscar";
             btnBuscar1.TextAlign = ContentAlignment.TopCenter;
@@ -123,7 +124,7 @@
             // textBox4
             // 
             textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(100, 55);
+            textBox4.Location = new Point(91, 51);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(139, 23);
             textBox4.TabIndex = 12;
@@ -132,7 +133,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Vendido", "No vendido" });
-            comboBox1.Location = new Point(100, 463);
+            comboBox1.Location = new Point(108, 423);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(143, 23);
             comboBox1.TabIndex = 13;
@@ -141,10 +142,18 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Reservado", "No reservado" });
-            comboBox2.Location = new Point(501, 463);
+            comboBox2.Location = new Point(485, 423);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(143, 23);
             comboBox2.TabIndex = 14;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Location = new Point(485, 467);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(143, 23);
+            textBox1.TabIndex = 15;
             // 
             // frmDisponibilidad
             // 
@@ -152,6 +161,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(656, 565);
+            Controls.Add(textBox1);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
             Controls.Add(textBox4);
@@ -178,5 +188,6 @@
         private TextBox textBox4;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
+        private TextBox textBox1;
     }
 }

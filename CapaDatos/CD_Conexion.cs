@@ -11,7 +11,7 @@ namespace CapaDatos
     public class CD_Conexion
     {
         //La cadena de conexion
-        private SqlConnection Conexion = new SqlConnection("Server=(local);Database=CrudF;Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Server=.;Database=CRUDF;Integrated Security=true");
 
         //Metodo para abrir la conexion
         public SqlConnection AbrirConexion()

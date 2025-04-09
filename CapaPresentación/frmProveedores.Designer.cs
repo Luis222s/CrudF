@@ -60,9 +60,9 @@
             btnBuscar2.FlatStyle = FlatStyle.Flat;
             btnBuscar2.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar2.ForeColor = Color.White;
-            btnBuscar2.Location = new Point(518, 61);
+            btnBuscar2.Location = new Point(494, 61);
             btnBuscar2.Name = "btnBuscar2";
-            btnBuscar2.Size = new Size(80, 34);
+            btnBuscar2.Size = new Size(123, 34);
             btnBuscar2.TabIndex = 14;
             btnBuscar2.Text = "Buscar";
             btnBuscar2.TextAlign = ContentAlignment.TopCenter;
@@ -85,6 +85,7 @@
             btnEliminar2.Text = "Eliminar";
             btnEliminar2.TextAlign = ContentAlignment.TopCenter;
             btnEliminar2.UseVisualStyleBackColor = false;
+            btnEliminar2.Click += btnEliminar2_Click;
             // 
             // btnEditar2
             // 
@@ -102,6 +103,7 @@
             btnEditar2.Text = "Editar";
             btnEditar2.TextAlign = ContentAlignment.TopCenter;
             btnEditar2.UseVisualStyleBackColor = false;
+            btnEditar2.Click += btnEditar2_Click;
             // 
             // btnAgregar2
             // 
@@ -118,6 +120,7 @@
             btnAgregar2.TabIndex = 11;
             btnAgregar2.Text = "Agregar";
             btnAgregar2.UseVisualStyleBackColor = false;
+            btnAgregar2.Click += btnAgregar2_Click;
             // 
             // textbox1
             // 
@@ -173,6 +176,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmProveedores";
             Text = "frmProveedores";
+            Load += frmProveedores_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

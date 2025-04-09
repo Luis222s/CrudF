@@ -41,13 +41,14 @@
             btnEliminar = new Button();
             btnBuscar = new Button();
             textBox7 = new TextBox();
+            textBox8 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(114, 377);
+            textBox1.Location = new Point(114, 383);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(179, 23);
             textBox1.TabIndex = 0;
@@ -55,7 +56,7 @@
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(114, 436);
+            textBox2.Location = new Point(114, 423);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(179, 23);
             textBox2.TabIndex = 1;
@@ -63,7 +64,7 @@
             // textBox3
             // 
             textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(114, 499);
+            textBox3.Location = new Point(114, 467);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(179, 23);
             textBox3.TabIndex = 2;
@@ -71,7 +72,7 @@
             // textBox4
             // 
             textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(489, 377);
+            textBox4.Location = new Point(501, 467);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(128, 23);
             textBox4.TabIndex = 3;
@@ -79,7 +80,7 @@
             // textBox5
             // 
             textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(489, 436);
+            textBox5.Location = new Point(501, 423);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(128, 23);
             textBox5.TabIndex = 4;
@@ -87,7 +88,7 @@
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(489, 499);
+            textBox6.Location = new Point(501, 383);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(128, 23);
             textBox6.TabIndex = 5;
@@ -161,9 +162,9 @@
             btnBuscar.FlatStyle = FlatStyle.Flat;
             btnBuscar.Font = new Font("Segoe MDL2 Assets", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscar.ForeColor = Color.White;
-            btnBuscar.Location = new Point(519, 38);
+            btnBuscar.Location = new Point(501, 38);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(98, 36);
+            btnBuscar.Size = new Size(116, 36);
             btnBuscar.TabIndex = 10;
             btnBuscar.Text = "Buscar";
             btnBuscar.TextAlign = ContentAlignment.TopCenter;
@@ -178,12 +179,21 @@
             textBox7.Size = new Size(139, 23);
             textBox7.TabIndex = 11;
             // 
+            // textBox8
+            // 
+            textBox8.BorderStyle = BorderStyle.FixedSingle;
+            textBox8.Location = new Point(501, 508);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(128, 23);
+            textBox8.TabIndex = 12;
+            // 
             // frmVehiculos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(656, 565);
+            Controls.Add(textBox8);
             Controls.Add(textBox7);
             Controls.Add(btnBuscar);
             Controls.Add(btnEliminar);
@@ -218,5 +228,6 @@
         private Button btnEliminar;
         private Button btnBuscar;
         private TextBox textBox7;
+        private TextBox textBox8;
     }
 }

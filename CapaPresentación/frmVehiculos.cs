@@ -24,6 +24,7 @@ namespace CapaPresentación
             textBox4.Enabled = false;
             textBox5.Enabled = false;
             textBox6.Enabled = false;
+            textBox8.Enabled = false;
 
             btnBuscar.Text = "Habilitar";
 
@@ -72,7 +73,7 @@ namespace CapaPresentación
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             // Si los TextBox están habilitados, los deshabilitamos, si están deshabilitados, los habilitamos.
-            bool estanHabilitados = textBox1.Enabled && textBox2.Enabled && textBox3.Enabled && textBox4.Enabled && textBox5.Enabled && textBox6.Enabled;
+            bool estanHabilitados = textBox1.Enabled && textBox2.Enabled && textBox3.Enabled && textBox4.Enabled && textBox5.Enabled && textBox6.Enabled && textBox8.Enabled;
 
             // Alternamos el estado de habilitación
             textBox1.Enabled = !estanHabilitados;
@@ -81,6 +82,7 @@ namespace CapaPresentación
             textBox4.Enabled = !estanHabilitados;
             textBox5.Enabled = !estanHabilitados;
             textBox6.Enabled = !estanHabilitados;
+            textBox8.Enabled = !estanHabilitados;
 
             // Opcional: cambiar el texto del botón para indicar la acción siguiente
             if (estanHabilitados)
