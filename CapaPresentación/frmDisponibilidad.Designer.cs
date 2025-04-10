@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDisponibilidad));
-            dataGridView1 = new DataGridView();
+            dgvConsultas = new DataGridView();
             btnAgregar1 = new Button();
             btnEditar1 = new Button();
             btnEliminar1 = new Button();
             btnBuscar1 = new Button();
             textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            cboEstadoVenta = new ComboBox();
+            cboDisponibilidad = new ComboBox();
+            cboVehiculo = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dgvConsultas).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvConsultas
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(36, 93);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(579, 223);
-            dataGridView1.TabIndex = 0;
+            dgvConsultas.BackgroundColor = Color.White;
+            dgvConsultas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvConsultas.Location = new Point(36, 93);
+            dgvConsultas.Name = "dgvConsultas";
+            dgvConsultas.Size = new Size(579, 223);
+            dgvConsultas.TabIndex = 0;
+            dgvConsultas.CellContentClick += dgvConsultas_CellContentClick;
             // 
             // btnAgregar1
             // 
@@ -128,32 +129,31 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(139, 23);
             textBox4.TabIndex = 12;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
-            // comboBox1
+            // cboEstadoVenta
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Vendido", "No vendido" });
-            comboBox1.Location = new Point(108, 423);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(143, 23);
-            comboBox1.TabIndex = 13;
+            cboEstadoVenta.FormattingEnabled = true;
+            cboEstadoVenta.Location = new Point(108, 423);
+            cboEstadoVenta.Name = "cboEstadoVenta";
+            cboEstadoVenta.Size = new Size(143, 23);
+            cboEstadoVenta.TabIndex = 13;
             // 
-            // comboBox2
+            // cboDisponibilidad
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Reservado", "No reservado" });
-            comboBox2.Location = new Point(485, 423);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(143, 23);
-            comboBox2.TabIndex = 14;
+            cboDisponibilidad.FormattingEnabled = true;
+            cboDisponibilidad.Location = new Point(485, 423);
+            cboDisponibilidad.Name = "cboDisponibilidad";
+            cboDisponibilidad.Size = new Size(143, 23);
+            cboDisponibilidad.TabIndex = 14;
             // 
-            // textBox1
+            // cboVehiculo
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(485, 467);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(143, 23);
-            textBox1.TabIndex = 15;
+            cboVehiculo.FormattingEnabled = true;
+            cboVehiculo.Location = new Point(485, 465);
+            cboVehiculo.Name = "cboVehiculo";
+            cboVehiculo.Size = new Size(143, 23);
+            cboVehiculo.TabIndex = 15;
             // 
             // frmDisponibilidad
             // 
@@ -161,33 +161,35 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(656, 565);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cboVehiculo);
+            Controls.Add(cboDisponibilidad);
+            Controls.Add(cboEstadoVenta);
             Controls.Add(textBox4);
             Controls.Add(btnBuscar1);
             Controls.Add(btnEliminar1);
             Controls.Add(btnEditar1);
             Controls.Add(btnAgregar1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvConsultas);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDisponibilidad";
             Text = "frmDisponibilidad";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += frmDisponibilidad_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvConsultas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvConsultas;
         private Button btnAgregar1;
         private Button btnEditar1;
         private Button btnEliminar1;
         private Button btnBuscar1;
         private TextBox textBox4;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private TextBox textBox1;
+        private ComboBox cboEstadoVenta;
+        private ComboBox cboDisponibilidad;
+        private ComboBox cboVehiculo;
     }
 }

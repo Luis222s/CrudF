@@ -38,23 +38,23 @@
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
             panel2 = new Panel();
+            btn_acerca = new Button();
+            pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             panel3 = new Panel();
-            pictureBox8 = new PictureBox();
-            btn_acerca = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // btnInicio
@@ -208,6 +208,35 @@
             panel2.Size = new Size(227, 452);
             panel2.TabIndex = 8;
             // 
+            // btn_acerca
+            // 
+            btn_acerca.BackColor = Color.Transparent;
+            btn_acerca.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_acerca.Cursor = Cursors.Hand;
+            btn_acerca.FlatAppearance.BorderSize = 0;
+            btn_acerca.FlatAppearance.MouseOverBackColor = Color.FromArgb(78, 139, 183);
+            btn_acerca.FlatStyle = FlatStyle.Flat;
+            btn_acerca.Font = new Font("Segoe Fluent Icons", 27F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_acerca.ForeColor = Color.White;
+            btn_acerca.Location = new Point(53, 399);
+            btn_acerca.Name = "btn_acerca";
+            btn_acerca.Size = new Size(171, 50);
+            btn_acerca.TabIndex = 9;
+            btn_acerca.Text = "Conócenos";
+            btn_acerca.TextAlign = ContentAlignment.TopLeft;
+            btn_acerca.UseVisualStyleBackColor = false;
+            btn_acerca.Click += btn_acerca_Click;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(3, 399);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(52, 50);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 0;
+            pictureBox8.TabStop = false;
+            // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
@@ -267,35 +296,6 @@
             panel3.Size = new Size(651, 538);
             panel3.TabIndex = 9;
             // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(3, 399);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(52, 50);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 0;
-            pictureBox8.TabStop = false;
-            // 
-            // btn_acerca
-            // 
-            btn_acerca.BackColor = Color.Transparent;
-            btn_acerca.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_acerca.Cursor = Cursors.Hand;
-            btn_acerca.FlatAppearance.BorderSize = 0;
-            btn_acerca.FlatAppearance.MouseOverBackColor = Color.FromArgb(78, 139, 183);
-            btn_acerca.FlatStyle = FlatStyle.Flat;
-            btn_acerca.Font = new Font("Segoe Fluent Icons", 27F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_acerca.ForeColor = Color.White;
-            btn_acerca.Location = new Point(53, 399);
-            btn_acerca.Name = "btn_acerca";
-            btn_acerca.Size = new Size(171, 50);
-            btn_acerca.TabIndex = 9;
-            btn_acerca.Text = "Conócenos";
-            btn_acerca.TextAlign = ContentAlignment.TopLeft;
-            btn_acerca.UseVisualStyleBackColor = false;
-            btn_acerca.Click += btn_acerca_Click;
-            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -311,17 +311,18 @@
             Controls.Add(panel2);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmInicio";
             Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 

@@ -174,6 +174,7 @@
             Controls.Add(btnAgregar2);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmProveedores";
             Text = "frmProveedores";
             Load += frmProveedores_Load;

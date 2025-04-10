@@ -53,6 +53,7 @@
             ClientSize = new Size(656, 565);
             Controls.Add(lblcantidad);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmHome";
             Text = "frmHome";
             Load += frmHome_Load;
