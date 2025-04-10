@@ -239,7 +239,7 @@ namespace CapaPresentación
 
             if (tabla != null)
             {
-                tabla.DefaultView.RowFilter = $"Modelo LIKE '%{filtro}%'";
+                tabla.DefaultView.RowFilter = $"Convert(Vehiculo_ID, 'System.String') LIKE '%{filtro}%'";
             }
         }
         private void LimpiarCampos()

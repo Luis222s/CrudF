@@ -17,11 +17,13 @@ namespace CapaPresentación
         {
             InitializeComponent();
         }
-
+        //TODO Metodo para agregar cantidad en el formInicio
         private void frmHome_Load(object sender, EventArgs e)
         {
             string conexion = "data source=.;initial catalog=CRUDF;integrated security=true;";
             string consulta = "SELECT COUNT(*) FROM Proveedor";
+            string consulta1 = "SELECT COUNT(*) FROM Vehiculos";
+            string consulta2 = "SELECT COUNT(*) FROM Disponibilidad";
 
             using (SqlConnection conn = new SqlConnection(conexion))
             {
@@ -32,6 +34,36 @@ namespace CapaPresentación
                     conn.Open();
                     int cantidad = (int)comando.ExecuteScalar();
                     lblcantidad.Text = $"{cantidad}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al contar registros: " + ex.Message);
+                }
+            }
+            using (SqlConnection conn1 = new SqlConnection(conexion))
+            {
+                SqlCommand comando = new SqlCommand(consulta1, conn1);
+
+                try
+                {
+                    conn1.Open();
+                    int cantidad = (int)comando.ExecuteScalar();
+                    label1.Text = $"{cantidad}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al contar registros: " + ex.Message);
+                }
+            }
+            using (SqlConnection conn2 = new SqlConnection(conexion))
+            {
+                SqlCommand comando = new SqlCommand(consulta2, conn2);
+
+                try
+                {
+                    conn2.Open();
+                    int cantidad = (int)comando.ExecuteScalar();
+                    label2.Text = $"{cantidad}";
                 }
                 catch (Exception ex)
                 {

@@ -66,7 +66,7 @@ namespace CapaPresentación
             pathBuscar2.CloseFigure();
             btnBuscar2.Region = new Region(pathBuscar2);
         }
-
+        //TODO Metodo habilitar y deshabilitar
         private void btnBuscar2_Click(object sender, EventArgs e)
         {
             // Si los TextBox están habilitados, los deshabilitamos, si están deshabilitados, los habilitamos.
@@ -89,17 +89,18 @@ namespace CapaPresentación
                 btnBuscar2.Text = "Deshabilitar";
             }
         }
+        //TODO Metodo para actualizar la tabla
         private void MostrarProductos()
         {
             CN_Proveedor objeto = new CN_Proveedor();
-            dataGridView1.DataSource = objeto.MostrarProductos();
+            dvgProveedor.DataSource = objeto.MostrarProductos();
         }
 
         private void frmProveedores_Load(object sender, EventArgs e)
         {
             MostrarProductos();
         }
-
+        //TODO Metodo para el boton agregar datos en la tabla
         private void btnAgregar2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textbox1.Text) ||
@@ -142,23 +143,24 @@ namespace CapaPresentación
                 }
             }
         }
-
+        //TODO Metodo para editar valores en la tabla
         private void btnEditar2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dvgProveedor.SelectedRows.Count > 0)
             {
                 Editar = true;
-                textbox1.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-                textbox2.Text = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
-                textbox3.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
-                textbox4.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
-                ProveedorID = dataGridView1.CurrentRow.Cells["Proveedor_ID"].Value.ToString();
+                textbox1.Text = dvgProveedor.CurrentRow.Cells["Nombre"].Value.ToString();
+                textbox2.Text = dvgProveedor.CurrentRow.Cells["Direccion"].Value.ToString();
+                textbox3.Text = dvgProveedor.CurrentRow.Cells["Email"].Value.ToString();
+                textbox4.Text = dvgProveedor.CurrentRow.Cells["Telefono"].Value.ToString();
+                ProveedorID = dvgProveedor.CurrentRow.Cells["Proveedor_ID"].Value.ToString();
             }
             else
             {
-                MessageBox.Show("Seleccione una fila para editar","No ha seleccionado una fila");
+                MessageBox.Show("Seleccione una fila para editar", "No ha seleccionado una fila");
             }
         }
+        //Metodo para limpiar textboxs
         private void LimpiarTextbox()
         {
             textbox1.Clear();
@@ -166,19 +168,30 @@ namespace CapaPresentación
             textbox3.Clear();
             textbox4.Clear();
         }
-
+        //TODO Metodo para eliminar datos de la tabla
         private void btnEliminar2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dvgProveedor.SelectedRows.Count > 0)
             {
-                ProveedorID = dataGridView1.CurrentRow.Cells["Proveedor_ID"].Value.ToString();
+                ProveedorID = dvgProveedor.CurrentRow.Cells["Proveedor_ID"].Value.ToString();
                 objetoCN.EliminarProd(ProveedorID);
                 MessageBox.Show("Se ha eliminado correctamente");
                 MostrarProductos();
             }
             else
             {
-                MessageBox.Show("Seleccione una fila para eliminar","No ha seleccionado una fila");
+                MessageBox.Show("Seleccione una fila para eliminar", "No ha seleccionado una fila");
+            }
+        }
+        //TODO Metodo para filtrar en el buscador
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtbuscar.Text.Trim();
+            DataTable tabla = (DataTable)dvgProveedor.DataSource;
+
+            if (tabla != null)
+            {
+                tabla.DefaultView.RowFilter = $"Convert(Proveedor_ID, 'System.String') LIKE '%{filtro}%'";
             }
         }
     }

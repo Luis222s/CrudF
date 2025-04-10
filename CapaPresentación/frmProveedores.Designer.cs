@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProveedores));
-            dataGridView1 = new DataGridView();
+            dvgProveedor = new DataGridView();
             btnBuscar2 = new Button();
             btnEliminar2 = new Button();
             btnEditar2 = new Button();
@@ -38,18 +38,18 @@
             textbox2 = new TextBox();
             textbox3 = new TextBox();
             textbox4 = new TextBox();
-            textBox5 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtbuscar = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dvgProveedor).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dvgProveedor
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(40, 101);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(577, 247);
-            dataGridView1.TabIndex = 0;
+            dvgProveedor.BackgroundColor = Color.White;
+            dvgProveedor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvgProveedor.Location = new Point(40, 101);
+            dvgProveedor.Name = "dvgProveedor";
+            dvgProveedor.Size = new Size(577, 247);
+            dvgProveedor.TabIndex = 0;
             // 
             // btnBuscar2
             // 
@@ -150,12 +150,13 @@
             textbox4.Size = new Size(139, 23);
             textbox4.TabIndex = 17;
             // 
-            // textBox5
+            // txtbuscar
             // 
-            textBox5.Location = new Point(97, 65);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(130, 23);
-            textBox5.TabIndex = 19;
+            txtbuscar.Location = new Point(97, 65);
+            txtbuscar.Name = "txtbuscar";
+            txtbuscar.Size = new Size(130, 23);
+            txtbuscar.TabIndex = 19;
+            txtbuscar.TextChanged += textBox5_TextChanged;
             // 
             // frmProveedores
             // 
@@ -163,7 +164,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(656, 565);
-            Controls.Add(textBox5);
+            Controls.Add(txtbuscar);
             Controls.Add(textbox3);
             Controls.Add(textbox4);
             Controls.Add(textbox2);
@@ -172,20 +173,20 @@
             Controls.Add(btnEliminar2);
             Controls.Add(btnEditar2);
             Controls.Add(btnAgregar2);
-            Controls.Add(dataGridView1);
+            Controls.Add(dvgProveedor);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmProveedores";
             Text = "frmProveedores";
             Load += frmProveedores_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dvgProveedor).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dvgProveedor;
         private Button btnBuscar2;
         private Button btnEliminar2;
         private Button btnEditar2;
@@ -194,6 +195,6 @@
         private TextBox textbox2;
         private TextBox textbox3;
         private TextBox textbox4;
-        private TextBox textBox5;
+        private TextBox txtbuscar;
     }
 }

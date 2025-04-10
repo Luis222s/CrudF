@@ -51,7 +51,7 @@ namespace CapaPresentación
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0x0f012, 0);
         }
-
+        //TODO metodo Para abrir formulario hijos
         private void AbrirFormHijo(object FormHijo)
         {
             if (this.panel3.Controls.Count > 0)
